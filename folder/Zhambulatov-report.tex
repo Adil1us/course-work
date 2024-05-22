@@ -1,0 +1,129 @@
+\documentclass[14pt, oneside]{altsu-report}
+
+\worktype{Отчёт по технологической (проектно-технологической) практике на тему:}
+\title{Разработка Игры "Жизнь" на Python}
+\author{А.\,Г.~Жамбулатов}
+\groupnumber{5.205-2}
+\GradebookNumber{1337}
+\supervisor{И.\,А.~Шмаков}  
+\supervisordegree{ст. преп. каф. ВТиЭ}
+\ministry{Министерство науки и высшего образования}
+\country{Российской Федерации}
+\fulluniversityname{ФГБОУ ВО Алтайский государственный университет}
+\institute{Институт цифровых технологий, электроники и физики}
+\department{Кафедра вычислительной техники и электроники}
+\departmentchief{В.\,В.~Пашнев}
+\departmentchiefdegree{к.ф.-м.н., доцент}
+\shortdepartment{ВТиЭ}
+
+\abstractRU{Курсовая работа представляет собой проект по разработке игры "Жизнь" на языке программирования Python. Целью данного проекта является изучение принципов клеточных автоматов, а также практическое применение навыков программирования на языке Python.
+
+Для успешной реализации проекта были использованы основные концепции языка программирования Python, такие как работа с массивами, условные операторы, функции и модули.
+
+Результатом выполненной работы стало создание функциональной и визуально привлекательной игры "Жизнь", способной демонстрировать эволюцию клеток на игровом поле в соответствии с правилами классической версии игры.
+
+В процессе выполнения курсовой работы был приобретен ценный опыт в области программирования на Python, а также углубленное понимание работы клеточных автоматов и их приложений в компьютерных науках.}
+
+\abstractEN{The coursework project involves the development of the game "Life" using the Python programming language. The objective of this project is to explore the principles of cellular automata and to apply practical programming skills in Python.
+
+To successfully implement the project, fundamental concepts of the Python programming language were utilized, such as working with arrays, conditional statements, functions, and modules.
+
+The result of the completed work was the creation of a functional and visually appealing "Life" game capable of demonstrating the evolution of cells on the game field according to the rules of the classic version of the game.
+
+In the process of completing the coursework project, valuable experience was gained in Python programming, as well as a deeper understanding of the operation of cellular automata and their applications in computer science.}
+\keysRU{КУРСОВАЯ РАБОТА, ПРОГРАММИРОВАНИЕ, PYTHON, ИГРА "ЖИЗНЬ", КЛЕТОЧНЫЕ АВТОМАТЫ}
+\keysEN{COURSE WORK, PROGRAMMING, PYTHON, GAME OF LIFE, CELLULAR AUTOMATA}
+
+\date{\the\year}
+
+% Подключение файлов с библиотекой.
+\addbibresource{graduate-students.bib}
+
+% Пакет для отладки отступов.
+%\usepackage{showframe}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+\makeabstract
+\tableofcontents
+
+\chapter*{Введение}
+\phantomsection\addcontentsline{toc}{chapter}{ВВЕДЕНИЕ}
+
+\textbf{Актуальность}
+
+Игра "Жизнь"~\cite{p1} - это классическая модель вычислительных систем, которая, несмотря на свою простоту, способна демонстрировать сложные и интересные эмерджентные явления~\cite{p2}. 
+
+Актуальность разработки игры "Жизнь" на Python~\cite{p4} обуславливается следующими факторами:
+\begin{enumerate}
+    \item Образовательная ценность:
+        \begin{itemize}
+            \item Изучение алгоритма Конвея: игра "Жизнь" наглядно демонстрирует работу алгоритма Конвея, который является важной частью теории вычислительных систем.
+            \item Освоение принципов программирования на Python: разработка игры "Жизнь" позволяет начинающим программистам осваивать основные принципы программирования на Python, такие как работа с переменными, циклы, функции, и модули.
+            \item Развитие навыков алгоритмического мышления: игра "Жизнь" - это отличная задача для развития навыков алгоритмического мышления, таких как декомпозиция задачи, проектирование алгоритмов, и анализ сложности.
+        \end{itemize}
+    \item Научная ценность:
+        \begin{itemize}
+            \item  Демонстрация явлений эмерджентности: игра "Жизнь" способна демонстрировать сложные эмерджентные явления, такие как самоорганизация, эволюция, и образование паттернов.
+            \item Изучение сложных систем: игра "Жизнь" может быть использована как модель для изучения сложных систем в различных областях, таких как биология, физика, и социология.
+        \end{itemize}
+    \item Практическая ценность:
+        \begin{itemize}
+            \item Развитие навыков программирования: разработка игры "Жизнь" - это практический проект, который позволяет программистам улучшить свои навыки программирования на Python.
+            \item Повышение интереса к информатике и программированию: игра "Жизнь" может быть использована для повышения интереса к информатике и программированию среди учащихся и студентов.
+        \end{itemize}
+    \item Универсальность:
+        \begin{itemize}
+            \item Различные платформы: игру "Жизнь" можно разрабатывать на различных платформах, таких как Windows, macOS, Linux, и Raspberry Pi.
+            \item Модифицируемость: игру "Жизнь" можно легко модифицировать и добавлять новые функции.
+        \end{itemize}
+\end{enumerate}
+
+\textbf{Цель:} Разработка игры "Жизнь" на языке программирования Python с использованием алгоритма Конвея.
+
+\textbf{Задачи:}
+\begin{itemize}
+    \item Изучение алгоритма Конвея.
+    \item Ознакомление с принципами работы игры "Жизнь".
+    \item Анализ существующих реализаций игры "Жизнь" на Python.
+    \item Разработка алгоритма игры "Жизнь" на Python.
+    \item Создание графического интерфейса игры с помощью библиотеки Pygame.
+    \item Реализация правил игры "Жизнь".
+    \item Добавление дополнительных функций и возможностей в игру (редактор карты, режим игры).
+    \item Тестирование и отладка игры.
+    \item Написание отчета о проделанной работе.
+    \item Подготовка презентации проекта.
+\end{itemize}
+
+% Подключение первой главы (теория):
+\include{chapter-1-report-csae.tex}
+% Подключение второй главы (практическая часть):
+\include{chapter-2-report-csae.tex}
+
+
+\chapter*{Заключение}
+\phantomsection\addcontentsline{toc}{chapter}{ЗАКЛЮЧЕНИЕ}
+
+\newpage
+\phantomsection\addcontentsline{toc}{chapter}{СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ}
+\printbibliography[title={Список использованной литературы}]
+\nocite{*}
+
+\appendix
+\newpage
+\chapter*{\raggedleft\label{appendix1}Приложение}
+\phantomsection\addcontentsline{toc}{chapter}{ПРИЛОЖЕНИЕ}
+%\section*{\centering\label{code:appendix}Текст программы}
+
+\begin{center}
+\label{code:appendix}
+\end{center}
+
+\begin{code}
+
+\end{code}
+
+\end{document}
+
